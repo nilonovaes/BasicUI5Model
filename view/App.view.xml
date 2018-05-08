@@ -1,8 +1,20 @@
- <mvc:View 
+ 
+
+
+
+<mvc:View 
     xmlns="sap.m" 
-    xmlns:mvc="sap.ui.core.mvc"
-    controllerName="ModelUI5.controller.App"
-    >
-    <Input id="input" placeholder="Insira um texto" width="50%" />
-    <Button text="Pressione" icon= "sap-icon://appear-offline" press="onPress" />
+    xmlns:mvc="sap.ui.core.mvc" controllerName="ModelUI5.controller.App">
+    <App>
+        <pages>
+            <Page title="Title">
+                <Panel headerText="Painel" expandable="true">
+                    <content>
+                        <Input id="input" placeholder="Insira um texto" width="50%" />
+                        <Button text="Pressione" icon= "sap-icon://appear-offline" press="onPress" />
+                    </content>
+                </Panel>
+            </Page>
+        </pages>
+    </App>
 </mvc:View>
