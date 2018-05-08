@@ -1,0 +1,10 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+    <Panel headerText="Painel" expandable="true">
+        <content>
+            <Input id="input" placeholder="Insira um texto" width="50%" />
+            <Button text="Pressione" icon= "sap-icon://appear-offline" press="onPress" />
+        </content>
+    </Panel>
+</core:FragmentDefinition>

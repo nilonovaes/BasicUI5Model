@@ -1,19 +1,13 @@
- 
-
-
-
 <mvc:View 
     xmlns="sap.m" 
-    xmlns:mvc="sap.ui.core.mvc" controllerName="ModelUI5.controller.App">
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:core="sap.ui.core" controllerName="ModelUI5.controller.App">
     <App>
         <pages>
             <Page title="Title">
-                <Panel headerText="Painel" expandable="true">
-                    <content>
-                        <Input id="input" placeholder="Insira um texto" width="50%" />
-                        <Button text="Pressione" icon= "sap-icon://appear-offline" press="onPress" />
-                    </content>
-                </Panel>
+                <content>
+                    <core:Fragment fragmentName="ModelUI5.view.Panel" type="XML"/>
+                </content>
             </Page>
         </pages>
     </App>
