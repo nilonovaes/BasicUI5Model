@@ -11,11 +11,9 @@ function (Controller) {
         onAfterRendering: function () {},
         onExit: function () {},
         onPress: function () {
+            
             this.getOwnerComponent()
-                .getRouter().navTo("Page2", {
-                    value: this.byId("input").getValue()
-                });
-
+                .getRouter().navTo("Page2");
         }
     });
 

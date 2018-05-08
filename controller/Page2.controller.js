@@ -21,19 +21,6 @@ function (Controller, History, Toast) {
                 oRouter.navTo("Page1");
             }
 
-        },
-        onInit: function () {
-
-            this.getOwnerComponent()
-                .getRouter()
-                .getRoute("Page2")
-                .attachPatternMatched(this._onObjectMatched, this);
-        },
-
-        _onObjectMatched: function (evt) {
-            // debugger;
-            var oValue = evt.getParameter("arguments").value;
-            Toast.show(oValue);
         }
 
     });

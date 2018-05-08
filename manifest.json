@@ -48,7 +48,7 @@
                 },
                 {
                     "name": "Page2",
-                    "pattern": "page2/{value}",
+                    "pattern": "page2",
                     "target": ["Page2"]
                 }
             ],
