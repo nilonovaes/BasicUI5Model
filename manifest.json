@@ -31,6 +31,40 @@
                 "sap.m": {}
             }
         },
-        "models": {}
+        "models": {},
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "ModelUI5.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [{
+                    "name": "Page1",
+                    "pattern": "",
+                    "target": ["Page1"]
+                },
+                {
+                    "name": "Page2",
+                    "pattern": "page2/{value}",
+                    "target": ["Page2"]
+                }
+            ],
+            "targets": {
+                "Page1": {
+                    "viewType": "XML",
+                    "viewLevel": 0,
+                    "viewName": "Page1"
+                },
+                "Page2": {
+                    "viewType": "XML",
+                    "viewLevel": 0,
+                    "viewName": "Page2"
+                }
+            }
+        }
+
     }
 }
