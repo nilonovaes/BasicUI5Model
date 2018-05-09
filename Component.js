@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/UIComponent"
-], function (UIComponent) {
+    "sap/ui/core/UIComponent",
+    "ModelUI5/model/models"
+], function (UIComponent, models) {
     "use strict";
 
     return UIComponent.extend("ModelUI5.Component", {
@@ -11,6 +12,9 @@ sap.ui.define([
 
         init: function () {
             UIComponent.prototype.init.apply(this, arguments);
+
+            this.setModel(models.createDeviceModel(), "device");
+
             this.getRouter().initialize();
 
         }

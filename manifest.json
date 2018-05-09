@@ -42,26 +42,16 @@
                 "async": true
             },
             "routes": [{
-                    "name": "Page1",
+                    "name": "Faces",
                     "pattern": "",
-                    "target": ["Page1"]
-                },
-                {
-                    "name": "Page2",
-                    "pattern": "page2",
-                    "target": ["Page2"]
+                    "target": ["Faces"]
                 }
             ],
             "targets": {
-                "Page1": {
+                "Faces": {
                     "viewType": "XML",
                     "viewLevel": 0,
-                    "viewName": "Page1"
-                },
-                "Page2": {
-                    "viewType": "XML",
-                    "viewLevel": 0,
-                    "viewName": "Page2"
+                    "viewName": "Faces"
                 }
             }
         }

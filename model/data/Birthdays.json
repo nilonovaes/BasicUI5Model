@@ -1,0 +1,24 @@
+{
+    "Birthdays": [{
+            "name": "Danilo Novaes",
+            "date": "08/11/1992",
+            "position": "Developer",
+            "image": "images/jake.jpg",
+            "isBirthday": ""
+        },
+        {
+            "name": "Erick FigueIredo",
+            "date": "27/06/1990",
+            "position": "Developer Boss",
+            "image": "images/finn.jpg",
+            "isBirthday": ""
+        },
+        {
+            "name": "Theo Medeiros",
+            "date": "10/06/1995",
+            "position": "UI5 Master",
+            "image": "images/bmo.jpg",
+            "isBirthday": ""
+        }
+    ]
+}
