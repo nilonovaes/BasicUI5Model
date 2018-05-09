@@ -6,14 +6,13 @@
         <content>
             <Panel expandable="false" content="{birthdays>/Birthdays}">
                 <content>
-                    <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" >
-                        <GenericTile backgroundImage="{birthdays>image}" frameType="TwoByOne">
+                    <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+                        <GenericTile backgroundImage="{birthdays>image}" frameType="{birthdays>isBirthday}">
                             <TileContent footer="{birthdays>date}">
                                 <NewsContent contentText="{birthdays>name}" subheader="{birthdays>position}" />
                             </TileContent>
                         </GenericTile>
-                        <GenericTile backgroundImage="{birthdays>image}" frameType="TwoByOne">
-                        </GenericTile>
+                        <GenericTile backgroundImage="{birthdays>image}" frameType="{birthdays>isBirthday}"></GenericTile>
                     </SlideTile>
                 </content>
             </Panel>
