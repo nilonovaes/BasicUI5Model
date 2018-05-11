@@ -19,6 +19,13 @@
             "position": "UI5 Master",
             "image": "images/bmo.jpg",
             "isBirthday": ""
+        },
+        {
+            "name": "Teste",
+            "date": "09/05/1995",
+            "position": "UI5 Master",
+            "image": "",
+            "isBirthday": ""
         }
     ]
 }

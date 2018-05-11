@@ -1,7 +1,7 @@
 sap.ui.define([
         "jquery.sap.global",
         "sap/ui/core/mvc/Controller",
-        "sap/ui/model/json/JSONModel",
+        "sap/ui/model/json/JSONModel"
     ],
 
     function (jQuery, Controller, JSONModel) {
@@ -12,14 +12,10 @@ sap.ui.define([
 
                 var oModel = new JSONModel(jQuery.sap.getModulePath("ModelUI5.model.data", "/Birthdays.json"));
 
-                this._changeframeType(oModel);
+                this._changeTitle(oModel);
 
 
-                // var that = this;
-                // oModel.attachRequestCompleted(function () {
-                //     that._changeframeType(oModel);
-                //     console.log("loaded");
-                // });
+                // this._changeframeType(oModel); Important ativar 
 
                 this.getView().setModel(oModel, "birthdays");
 
@@ -28,7 +24,11 @@ sap.ui.define([
             onBeforeRendering: function () {},
             onAfterRendering: function () {},
             onExit: function () {},
-            onPress: function () {},
+            onPress: function () {
+
+                this.getOwnerComponent().getRouter().navTo("Adm");
+
+            },
 
             _changeframeType: function (oModel) {
 
@@ -66,6 +66,54 @@ sap.ui.define([
                 if (date < 10) {
                     return date = '0' + date;
                 }
+            },
+
+
+            _changeTitle: function (oModel) {
+
+                var _months = [{
+                        month: "{i18n>Jan}"
+                    },
+                    {
+                        month: "{i18n>Feb}"
+                    },
+                    {
+                        month: "{i18n>Mar}"
+                    },
+                    {
+                        month: "{i18n>Apr}"
+                    },
+                    {
+                        month: "{i18n>May}"
+                    },
+                    {
+                        month: "{i18n>Jun}"
+                    },
+                    {
+                        month: "{i18n>Jul}"
+                    },
+                    {
+                        month: "{i18n>Aug}"
+                    },
+                    {
+                        month: "{i18n>Sep}"
+                    },
+                    {
+                        month: "{i18n>Oct}"
+                    },
+                    {
+                        month: "{i18n>Nov}"
+                    },
+                    {
+                        month: "{i18n>Dec}"
+                    }
+                ];
+
+                // var model = new sap.ui.model.json.JSONModel(_months);
+                // sap.ui.getCore().setModel(model);
+
+                var birthdays = oModel.getProperty("/Birthdays");
+
             }
 
 

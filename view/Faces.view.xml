@@ -2,7 +2,20 @@
     xmlns="sap.m" 
     xmlns:core="sap.ui.core" 
     xmlns:mvc="sap.ui.core.mvc" controllerName="ModelUI5.controller.Faces">
-    <Page title="E-IT Birthday">
+    <Page title="E-IT Birthday" enableScrolling="true" showHeader="true" class="sapMGlobalBackgroundImage sapMGlobalBackgroundColor myRootPage ">
+        <customHeader>
+            <Bar class="myEitBar">
+                <contentLeft>
+                    <Image height="75%" src="images/eitlogo.png"/>
+                </contentLeft>
+                <contentMiddle class="whiteColor">
+                    <Text text = "{months>month}" ></Text>
+                </contentMiddle>
+                <contentRight>
+                    <Button type="Accept" icon="sap-icon://action-settings" press="onPress" ></Button>
+                </contentRight>
+            </Bar>
+        </customHeader>
         <content>
             <Panel expandable="false" content="{birthdays>/Birthdays}">
                 <content>
