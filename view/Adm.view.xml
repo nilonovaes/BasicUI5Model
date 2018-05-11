@@ -4,14 +4,14 @@
     xmlns:mvc="sap.ui.core.mvc" 
     controllerName="ModelUI5.controller.Adm">
 
-    <Page title="E-IT Birthday" enableScrolling="true" showHeader="true" class="sapMGlobalBackgroundImage sapMGlobalBackgroundColor myRootPage ">
+    <Page title="E-IT Birthday - User Management" enableScrolling="true" showHeader="true" class="sapMGlobalBackgroundImage sapMGlobalBackgroundColor myRootPage ">
         <customHeader>
             <Bar class="myEitBar">
                 <contentLeft>
                     <Image height="75%" src="images/eitlogo.png"/>
                 </contentLeft>
                 <contentMiddle class="whiteColor">
-                    <Text text = "E-IT Birthday"></Text>
+                    <Text text = "E-IT Birthday - User Management"></Text>
                 </contentMiddle>
                 <contentRight>
                     <Button type="Accept" icon="sap-icon://home" press="onNavPress"></Button>
@@ -53,9 +53,8 @@
                             <ObjectIdentifier title="{birthdays>position}"/>
 
                             <ObjectStatus 
-                                icon="{= ${produto>image} === '' ? 'sap-icon://message-success' : 
-                                         ${produto>image} === '' ? 'sap-icon://message-warning' : 'sap-icon://message-error' }"
-
+                                icon="{= ${birthdays>image} === '' ? 'sap-icon://circle-task-2' : 'sap-icon://circle-task-2' }"
+                                state="{= ${birthdays>image} === '' ? 'Error' : 'Success' }"
                                 />
 
                             <!-- <ObjectIdentifier title="{birthdays>image}"/> -->
