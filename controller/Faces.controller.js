@@ -14,34 +14,43 @@ sap.ui.define([
 
                 this._changeTitle(oModel);
 
-
-                // this._changeframeType(oModel); Important ativar 
+                this._changeframeType(oModel, evt);
 
                 this.getView().setModel(oModel, "birthdays");
 
             },
 
             onBeforeRendering: function () {},
-            onAfterRendering: function () {},
-            onExit: function () {},
-            onPress: function () {
+            onAfterRendering: function (evt) {
 
-                this.getOwnerComponent().getRouter().navTo("Adm");
+                // var oComponent = this.getOwnerComponent();
+
+                // var oModel = oComponent.getModel("birthdays");
+
+                // this._changeframeType(oModel, evt);
+
+                // this.getView().setModel(oModel, "birthdays");
 
             },
+            onExit: function () {},
+            onPress: function () {
+                this.getOwnerComponent().getRouter().navTo("Adm");
+            },
 
-            _changeframeType: function (oModel) {
+            _changeframeType: function (oModel, evt) {
 
                 var currentDate = this._getCurrentDate();
 
                 var birthdays = oModel.getProperty("/Birthdays");
 
-                for (var i = 0; i < birthdays.length; i++) {
+                if (birthdays != null) {
+                    for (var i = 0; i < birthdays.length; i++) {
 
-                    if (birthdays[i].date.substring(0, 5) == currentDate.substring(0, 5)) {
-                        birthdays[i].isBirthday = "TwoByOne";
-                    } else {
-                        birthdays[i].isBirthday = "OneByOne";
+                        if (birthdays[i].date.substring(0, 5) == currentDate.substring(0, 5)) {
+                            birthdays[i].isBirthday = "TwoByOne";
+                        } else {
+                            birthdays[i].isBirthday = "OneByOne";
+                        }
                     }
 
                 }
@@ -65,7 +74,7 @@ sap.ui.define([
 
                 if (date < 10) {
                     return date = '0' + date;
-                }
+                }else{return date}
             },
 
 

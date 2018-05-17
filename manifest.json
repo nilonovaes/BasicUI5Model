@@ -64,7 +64,12 @@
                 "name": "Adm",
                 "pattern": "adm",
                 "target": ["Adm"]
-            }   
+            },
+            {
+                "name": "User",
+                "pattern": "user/{value}",
+                "target": ["User"]
+            }            
         ],
             "targets": {
                 "Faces": {
@@ -76,6 +81,11 @@
 					"viewType": "XML",
 					"viewLevel": 0,
 					"viewName": "Adm"
+                },
+                "User": {
+					"viewType": "XML",
+					"viewLevel": 0,
+					"viewName": "User"
 				}
             }
         }

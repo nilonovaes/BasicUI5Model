@@ -3,28 +3,32 @@
             "name": "Danilo Novaes",
             "date": "08/11/1992",
             "position": "Developer",
+			"active": "X",
             "image": "images/jake.jpg",
             "isBirthday": ""
         },
         {
             "name": "Erick FigueIredo",
-            "date": "27/06/1990",
+            "date": "14/05/1990",
             "position": "Developer Boss",
+		    "active": "X",
             "image": "images/finn.jpg",
             "isBirthday": ""
         },
         {
             "name": "Theo Medeiros",
-            "date": "09/05/1995",
+            "date": "11/05/1995",
             "position": "UI5 Master",
-            "image": "images/bmo.jpg",
+			"active": "X",
+            "image": "",
             "isBirthday": ""
         },
         {
-            "name": "Teste",
+            "name": "Rodrigo Leite",
             "date": "09/05/1995",
-            "position": "UI5 Master",
-            "image": "",
+            "position": "Leitão",
+			"active": "",
+            "image": "images/bmo.jpg",
             "isBirthday": ""
         }
     ]

@@ -9,10 +9,10 @@
                     <Image height="75%" src="images/eitlogo.png"/>
                 </contentLeft>
                 <contentMiddle class="whiteColor">
-                    <Text text = "{months>month}" ></Text>
+                    <Text text = "{months>month}"></Text>
                 </contentMiddle>
                 <contentRight>
-                    <Button type="Accept" icon="sap-icon://action-settings" press="onPress" ></Button>
+                    <Button type="Accept" icon="sap-icon://action-settings" press="onPress"></Button>
                 </contentRight>
             </Bar>
         </customHeader>
@@ -21,14 +21,17 @@
                 <content>
                     <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
                         <GenericTile backgroundImage="{birthdays>image}" frameType="{birthdays>isBirthday}">
-                            <TileContent footer="{birthdays>date}">
-                                <NewsContent contentText="{birthdays>name}" subheader="{birthdays>position}" />
-                            </TileContent>
-                        </GenericTile>
-                        <GenericTile backgroundImage="{birthdays>image}" frameType="{birthdays>isBirthday}"></GenericTile>
-                    </SlideTile>
-                </content>
-            </Panel>
-        </content>
-    </Page>
-</mvc:View>
+                            <!-- <GenericTile backgroundImage="{birthdays>image}" frameType="OneByOne"> -->
+                                <TileContent footer="{birthdays>date}">
+                                    <NewsContent contentText="{birthdays>name}" subheader="{birthdays>position}" />
+                                </TileContent>
+                            </GenericTile> 
+                        
+                            <!-- <GenericTile backgroundImage="{birthdays>image}" frameType="OneByOne"></GenericTile> -->
+                            <GenericTile backgroundImage="{birthdays>image}" frameType="{birthdays>isBirthday}"></GenericTile>
+                        </SlideTile>
+                    </content>
+                </Panel>
+            </content>
+        </Page>
+    </mvc:View>
